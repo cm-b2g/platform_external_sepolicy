@@ -24,7 +24,7 @@ endif
 
 # Builds paths for all policy files found in BOARD_SEPOLICY_DIRS.
 # $(1): the set of policy name paths to build
-build_policy = $(foreach type, $(1), $(wildcard $(addsuffix /$(type), $(LOCAL_PATH) $(BOARD_SEPOLICY_DIRS))))
+build_policy = $(foreach type, $(1), $(wildcard $(addsuffix /$(type), $(LOCAL_PATH) gonk-misc/sepolicy $(BOARD_SEPOLICY_DIRS))))
 
 sepolicy_build_files := security_classes \
                         initial_sids \
